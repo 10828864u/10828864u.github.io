@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Strona">
+		<title>BMI</title>
+	</head>
+	<body>
+	  <script language="JavaScript">
+      function bmi() {
+
+        height=parseFloat(document.forms[0].elements[0].value);
+        weight=parseFloat(document.forms[0].elements[1].value);
+        gravity=parseFloat(document.forms[0].elements[3].querySelector('input[name="choice"]:checked').value);
+        bmi=gravity*weight/gravity/gravity;
+        alert(bmi);
+        if(bmi<16) alert("Wygłodzenie");
+        else if(bmi<17) alert("Wychudzenie");
+        else if(bmi<18.5) alert("Niedowaga");
+        else if(bmi<25) alert("Optimum");
+        else if(bmi<30) alert("Nadwaga");
+        else if(bmi<35) alert("Otyłość I stopnia");
+        else if(bmi<40) alert("Otyłość II stopnia");
+        else alert("Otyłość III stopnia");
+        
+      }
+    </script>
+    <h2>MIEJSCE POMIARU:</h2>
+    <form>
+      <input type="radio" name="choice" value="27.9">Słońce
+      <input type="radio" name="choice" value="0.377">Merkury
+      <input type="radio" name="choice" value="0.9032">Wenus
+      <input type="radio" name="choice" value="1">Ziemia
+      <input type="radio" name="choice" value="0.1655">Księżyc
+      <input type="radio" name="choice" value="0.3895">Mars
+      <input type="radio" name="choice" value="2.64">Jowisz
+      <input type="radio" name="choice" value="1.139">Saturn
+      <input type="radio" name="choice" value="0.917">Uran
+      <input type="radio" name="choice" value="1.148">Neptun
+      <input type="radio" name="choice" value="0.0621">Pluton
+    </form>
+
+    
+	</body>
+
+
+</html>
